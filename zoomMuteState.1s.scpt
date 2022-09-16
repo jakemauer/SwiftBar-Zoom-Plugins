@@ -22,9 +22,9 @@ if application "zoom.us" is running then
 		tell application process "zoom.us"
 			if exists (menu bar item "Meeting" of menu bar 1) then
 				if exists (menu item btnTitle of menu 1 of menu bar item "Meeting" of menu bar 1) then
-					set returnValue to ":mic.fill: | sfcolor=#BD0528"
+					set returnValue to ":mic.fill:| sfcolor=#BD0528"
 				else
-					set returnValue to ":mic.slash.fill: |"
+					set returnValue to ":mic.slash.fill:|"
 				end if
 			else
 				set returnValue to "|"
@@ -32,7 +32,7 @@ if application "zoom.us" is running then
 		end tell
 	end tell
 else
-	set returnValue to ""
+	set returnValue to "|"
 end if
 
 return returnValue & " size=16
