@@ -22,19 +22,19 @@ if application "zoom.us" is running then
 		tell application process "zoom.us"
 			if exists (menu bar item "Meeting" of menu bar 1) then
 				if exists (menu item btnTitle of menu 1 of menu bar item "Meeting" of menu bar 1) then
-					set returnValue to "VIDEO ACTIVE"
+					set returnValue to ":video.fill:| sfcolor=#BD0528"
 				else
-					set returnValue to "NO VIDEO"
+					set returnValue to ":video.slash.fill:|"
 				end if
 			else
-				set returnValue to ""
+				set returnValue to "|"
 			end if	
 		end tell
 	end tell
 else
-	set returnValue to ""
+	set returnValue to "|"
 end if
 
-return returnValue & "| size=18
+return returnValue & " size=16
 ---
 zoomVideoState"
