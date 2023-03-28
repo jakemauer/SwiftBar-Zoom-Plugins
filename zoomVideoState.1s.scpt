@@ -1,4 +1,3 @@
-#!/usr/bin/osascript
 
 # <bitbar.title>zoomVideoState</bitbar.title>
 # <bitbar.version>v1.0</bitbar.version>
@@ -13,7 +12,7 @@
 # <swiftbar.hideRunInTerminal>true</swiftbar.hideRunInTerminal>
 # <swiftbar.hideLastUpdated>true</swiftbar.hideLastUpdated>
 # <swiftbar.hideDisablePlugin>true</swiftbar.hideDisablePlugin>
-# <swiftbar.hideSwiftBar>false</swiftbar.hideSwiftBar>
+# <swiftbar.hideSwiftBar>false</swiftbar.hideSwiftBar>◦
 
 property btnTitle : "Stop Video"
 
@@ -22,19 +21,19 @@ if application "zoom.us" is running then
 		tell application process "zoom.us"
 			if exists (menu bar item "Meeting" of menu bar 1) then
 				if exists (menu item btnTitle of menu 1 of menu bar item "Meeting" of menu bar 1) then
-					set returnValue to ":video.fill:| sfcolor=#BD0528"
+					set returnValue to ":video.fill:| color=#BD0528 sfcolor=#BD0528"
 				else
-					set returnValue to ":video.slash.fill:|"
+					set returnValue to ":video.slash:| "
 				end if
 			else
 				set returnValue to "|"
-			end if	
+			end if
 		end tell
 	end tell
 else
 	set returnValue to "|"
 end if
 
-return returnValue & " size=16
+return returnValue & " size=16 trim
 ---
 zoomVideoState"
