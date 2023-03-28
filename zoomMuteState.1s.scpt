@@ -1,4 +1,3 @@
-#!/usr/bin/osascript
 
 # <bitbar.title>zoomMuteState</bitbar.title>
 # <bitbar.version>v1.0</bitbar.version>
@@ -22,13 +21,13 @@ if application "zoom.us" is running then
 		tell application process "zoom.us"
 			if exists (menu bar item "Meeting" of menu bar 1) then
 				if exists (menu item btnTitle of menu 1 of menu bar item "Meeting" of menu bar 1) then
-					set returnValue to ":mic.fill:| sfcolor=#BD0528"
+					set returnValue to "ON AIR :mic.fill:| color=#BD0528 sfcolor=#BD0528 font='SF Pro Display Semibold'"
 				else
-					set returnValue to ":mic.slash.fill:|"
+					set returnValue to ":mic.slash:| "
 				end if
 			else
 				set returnValue to "|"
-			end if	
+			end if
 		end tell
 	end tell
 else
